@@ -1,3 +1,9 @@
 .container {
     padding: 20px 15px;
+
+    .profile__preview__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); //This will fill each profile preview with min-width of 260px
+        grid-gap: 30px; //This gives gap between element both horizontally and vertically
+    }
 }

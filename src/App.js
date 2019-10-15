@@ -10,7 +10,7 @@ function App() {
   return (
     <Layout>
       <Meta title="Home" />
-      <div style={{ height: "150vh" }}>
+      <div className="profile__preview__container" style={{ height: "150vh" }}>
         <ProfilePreview></ProfilePreview>
       </div>
     </Layout>
