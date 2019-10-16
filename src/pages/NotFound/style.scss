@@ -1,0 +1,99 @@
+@import '../../variables.scss';
+
+.not-found-page {
+  background: $details-color;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+
+  &__content {
+    z-index: 3;
+
+    &__astronaut {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+
+      figure {
+        width: auto;
+        height: auto;
+        padding: 20px;
+
+        img {
+          width: 80%;
+          animation: moveAstronaut 3s infinite;
+        }
+      }
+    }
+
+    &__phrase {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      vertical-align: top;
+
+      &__status {
+        font-size: 130px;
+        margin: 0;
+        border-bottom: solid 1px;
+      }
+
+      &__text {
+        margin: 5px 0 0 0;
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      &__button {
+        display: block;
+        width: 230px;
+        height: 45px;
+        text-align: center;
+        background: $secondary-color;
+        color: $details-color;
+        padding-top: 12px;
+        border-radius: 7px;
+        font-weight: 800;
+        text-transform: uppercase;
+        -webkit-transition: ease-in-out .2s;
+        -o-transition: ease-in-out .2s;
+        transition: ease-in-out .2s;
+        border: solid 1px transparent;
+        text-decoration: none;
+        margin: 50px 0 0 0;
+
+        &:hover {
+          background: $details-color;
+          color: $secondary-color;
+          border: solid 1px $secondary-color;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background: $secondary-color;
+    color: $details-color;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+  }
+}
+
+@keyframes moveAstronaut {
+  0% {
+    padding: 15px;
+  }
+  50% {
+    padding: 0px;
+  }
+  100% {
+    padding: 15px;
+  }
+}
